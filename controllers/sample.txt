@@ -1,0 +1,16 @@
+const catchAsync = require("./../utils/catchAsync");
+const AppError = require("./../utils/appError");
+// Import required models if necessary 
+
+exports.functionName = catchAsync ((req,res,next)=>{
+     // Controller code;
+
+     // if to throw any error use
+     // return new AppError("Error Message", errorCode);
+
+     // To send success response
+     // res.send(statusCode).json({
+         status: "success",
+         data ("if required")
+     })
+})

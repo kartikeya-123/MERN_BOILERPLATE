@@ -1,0 +1,17 @@
+const mongoose = require("mongoose");
+const validator = require("validator");
+
+const schema = new mongoose.Schema(
+  {
+    field : {
+        type : FieldType
+    }
+  },
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
+);
+
+const SchemaName = mongoose.model("SchemaName", schema);
+module.exports = SchemaName;
